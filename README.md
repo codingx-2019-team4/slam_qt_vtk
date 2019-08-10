@@ -1,5 +1,5 @@
 # SLAM_QT_VTK
-<img src="https://github.com/codingx-2019-team4/slam_qt_vtk/blob/master/image/ch3_2.png" align="right" width="360"/>
+<img src="https://github.com/codingx-2019-team4/slam_qt_vtk/blob/master/image%20/ch3_2.png" align="right" width="360"/>
 ## ENV setting up
 ```
 Ubuntu 16.04 LTS
