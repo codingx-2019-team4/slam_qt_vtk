@@ -4,7 +4,7 @@ project(v1)
 
 set(CMAKE_CXX_FLAGS "-std=c++11")
 
-find_package(OpenCV 3.4.2 REQUIRED)
+find_package(OpenCV 3 REQUIRED)
 
 message(STATUS "OpenCV library status:")
 message(STATUS "    config: ${OpenCV_DIR}")

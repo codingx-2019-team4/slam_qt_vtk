@@ -37,12 +37,17 @@ tar -xzvf VTK-7.1.1.tar.gz
 cd VTK-7.1.1 
 mkdir build && cd build 
 cmake ..
-make -j8
+sudo make -j8
 sudo make install
 ``` 
-* [pcl 1.9.1](http://pointclouds.org/)
+* [pcl 1.8.0](http://pointclouds.org/)
 ```
-sudo add-apt-repositor ppa:v-launchpad-jochen-sprickerhof-de/pcl
-sudo apt-get update
-sudo apt-get install libpcl-all
+wget https://github.com/PointCloudLibrary/pcl/archive/pcl-1.8.0.tar.gz
+tar -zxf pcl-1.8.0.tar.gz
+cd pcl-pcl-1.8.0
+mkdir build
+cd build
+cmake ..
+sudo make -j8
+sudo make install
 ```
