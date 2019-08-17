@@ -1,12 +1,12 @@
 cmake_minimum_required( VERSION 2.8 )
 project( joinMap )
 
-set( CMAKE_BUILD_TYPE Release )
+set( CMAKE_BUILD_TYRPE Release )
 set( CMAKE_CXX_FLAGS "-std=c++11 -O3" )
 
-# opencv 
+# opencv
 find_package( OpenCV REQUIRED )
-include_directories( ${OpenCV_INCLUDE_DIRS} )
+include_directories( ${OpenCV_INCLUDE_DIS} )
 
 # eigen 
 include_directories( "/usr/include/eigen3/" )

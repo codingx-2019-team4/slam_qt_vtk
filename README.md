@@ -30,7 +30,7 @@ cmake ..
 make -j8
 sudo make install
 ``` 
-* [vtk 7](https://vtk.org/)
+* [vtk 7.1.1](https://vtk.org/)
 ``` 
 wget https://www.vtk.org/files/release/7.1/VTK-7.1.1.tar.gz
 tar -xzvf VTK-7.1.1.tar.gz
@@ -51,3 +51,7 @@ cmake ..
 sudo make -j8
 sudo make install
 ```
+<font color="red">We success using pcl-1.8 + vtk-7.1.1 install on ubuntu 16.04.</font>
+
+
+
