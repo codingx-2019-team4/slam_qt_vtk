@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <node
+    name="tf_footprint_base"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0.1 0 0 0 base_footprint base_link 40" />
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find fire_house)/worlds/myhome_t.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+
+  <!--Load dog-->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find dog1)/robots/dog1.xacro'"/>
+
+  <node name="dog_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x -2 -y 0 -z 0.1 -param robot_description -model dog" />
+
+
+  <node pkg="tf" type="static_transform_publisher" name="base_link2laser_link"     args="-0.05 0 0.05 0 0 0 /base_link /base_scan 30"/>
+  <node pkg="tf" type="static_transform_publisher" name="base_link2camara_link"    args="0.05 0 0.05 1.57075 0 1.57075 /base_link /camera 30"/>
+
+  
+
+
+  <node
+    name="fake_joint_calibration"
+    pkg="rostopic"
+    type="rostopic"
+    args="pub /calibrated std_msgs/Bool true" />
+</launch>
