@@ -26,8 +26,11 @@ rosrun map_server map_saver -f ~/fireHouse
 ```
 
 ### TESTING point cloud to laser scan with map server
+
 <img src="https://github.com/codingx-2019-team4/slam_qt_vtk/blob/master/image%20/gazebo2.png" align="right" width="360"/>
+
 Need robot model from [this repo](https://github.com/tony92151/ros_DQN_guide_dog)
+
 ```
 roslaunch fireHouse gazebo.launch
 roslaunch fire_house point2scan.launch
