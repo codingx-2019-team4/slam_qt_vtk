@@ -1,5 +1,7 @@
 # ROS
 
+<img src="https://github.com/codingx-2019-team4/slam_qt_vtk/blob/master/image%20/gazebo.png" align="right" width="360"/>
+
 ## ENV setting up
 
 ### Gazebo model
