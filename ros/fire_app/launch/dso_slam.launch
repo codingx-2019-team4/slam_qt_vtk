@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--reference https://www.ncnynl.com/archives/201806/2467.html-->
+
+<launch>
+
+
+   <node name="dso_ros" pkg="dso_live" type="dso_slam" output="screen">
+
+       <param name="image" value="/usb_cam/image_raw" />
+       <param name="calib" value="$(find fire_app)/calibration.txt" />
+       <param name="mode" value="1" />
+
+   </node>
+ </launch>
+
+rosrun dso_ros dso_live image:=/camera/rgb/image_raw calib=/xxxx/DSO/camera.txt mode=1

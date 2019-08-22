@@ -53,5 +53,3 @@ sudo make install
 ```
 <font color="red">We success using pcl-1.8 + vtk-7.1.1 install on ubuntu 16.04.</font>
 
-
-
