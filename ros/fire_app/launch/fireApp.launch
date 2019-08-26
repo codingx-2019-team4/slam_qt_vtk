@@ -1,9 +1,11 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
-  <include file="$(find fire_house)/launch/gazebo.launch"/>
+  <include file="$(find fire_house)/launch/fireHouse2_gazebo_depth.launch"/>
   <include file="$(find fire_house)/launch/point2scan.launch"/>
   <include file="$(find fire_house)/launch/gmapping.launch"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find fire_app)/rviz/gmapping_rviz.rviz"/>
+
+
 
   
 </launch>

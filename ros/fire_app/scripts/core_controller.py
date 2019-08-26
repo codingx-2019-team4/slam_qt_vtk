@@ -18,7 +18,7 @@ class core_control:
 
         rospy.set_param('start_mapping', 1)
         
-        self.mapping_launch = roslaunch.parent.ROSLaunchParent(uuid, [dirpath_core+"/launch/fack.launch"])
+        self.mapping_launch = roslaunch.parent.ROSLaunchParent(uuid, [dirpath_core+"/launch/fireApp.launch"])
         self.mapping_launch_already = 0
 
 
@@ -40,7 +40,6 @@ class core_control:
                 rospy.sleep(0.3)
                 self.mapping_launch.shutdown()
                 self.mapping_launch_already = 0
-                self.init_again()
                 rospy.loginfo("slam closed")
             else:
                 rospy.loginfo("slam have already closed")
