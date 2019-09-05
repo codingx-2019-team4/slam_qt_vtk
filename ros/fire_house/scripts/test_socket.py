@@ -17,7 +17,7 @@ import socket
 class local_server:
     def __init__(self):
 
-        self.HOST = '192.168.208.153'
+        self.HOST = '172.20.10.7'
         self.PORT = 8001
         self.sock = socket.socket()
         #self.sock.connect((self.HOST, self.PORT))
